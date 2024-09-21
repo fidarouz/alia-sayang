@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+
+body {
+
+    background-color: #F3E5F5;
+    overflow: hidden;
+    
+    
+}
+
+.zoom-reset {
+    zoom: 1;
+    transform: scale(1);
+}
+.container{
+
+    border: solid;
+    
+    
+}
+
+.line{
+
+    position: relative ;
+    display: flex;
+    background-color: black;
+    width: 100vw;
+    height: 1px;
+    margin-top: 35vh;
+    border: solid;
+}
+
+.line2{
+
+    position: relative ;
+    display: flex;
+    background-color: black;
+    width: 100vw;
+    height: 1px;
+    margin-top: 15vh;
+    border: solid;
+}
+
+.line3{
+
+    position: relative ;
+    display: flex;
+    width: 100vw;
+    height: 1px;
+    margin-top: 10vh;
+    border-top: none;
+    height: 20px; /* Adjust the height of the line */
+    background-image: linear-gradient(to right, black 50%, transparent 50%);
+    background-size: 150px 1px; /* Adjust the width and spacing of the dots */
+    
+}
+
+
+.motor{
+
+    position: absolute;
+    display: flex;
+    
+    height: 60vh;
+    top: 0vh;
+    left: 0vw;
+    animation: moving 2s linear 1s forwards;
+    
+}
+
+
+.bubble1 {
+
+
+    position: absolute;
+    display: flex;
+    
+    height: 30vh;
+    top: 0vh;
+    left: 50vw;
+    visibility: hidden;
+    animation: popup 1s linear 3s forwards;
+    
+    
+}
+
+.close{
+
+    animation: fadeout 1s linear 3s forwards;
+}
+
+
+.bubble2 {
+
+    position: absolute;
+    display: flex;
+    
+    height: 30vh;
+    top: -3vh;
+    left: 30vw;
+    visibility: hidden;
+    animation: popup 1s linear 4s forwards;
+    
+
+}
+
+.bubble3 {
+
+    position: absolute;
+    display: flex;
+    
+    height: 30vh;
+    top: -3vh;
+    left: 30vw;
+    visibility: hidden;
+    z-index: 999;
+    
+
+}
+
+.box {
+
+    position: absolute;
+    display: flex;
+    height: 2vh;
+    top: 35vh;
+    left: 95vh;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.animatedBox {
+    animation: slide 2s ease forwards; /* Animation property */
+  }
+
+.clickbox {
+
+    animation: boxbig 2s ease forwards;
+
+}
+
+/* THIS IS FORM  */
+.popup {
+
+    position: absolute;
+    display: flex;
+    height: 30vh;
+    width: 20vw;
+    top: 50vh;
+    left: 70vw;
+    border-radius: 30px;
+    border: solid 5px black;
+    visibility: hidden;
+    background-color: white;
+    
+}
+
+
+
+.name{
+
+    
+    width: 100%;
+    
+}
+
+
+.name h2{
+
+    text-align: center;
+    margin-top: 5vh;
+    
+}
+
+.form{
+    position: relative;
+    text-align: center;
+    
+    top: 5vh;
+
+}
+
+.form input{
+
+    border-radius: 10px;
+}
+
+.buttonname{
+    position:relative;
+    text-align: center;
+    top: 7vh;
+
+}
+
+.buttonname button{
+    position: relative;
+    height: 5vh;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #F3E5F5;
+    width: 15vh;
+    background-color: red;
+}
+
+.clickhere{
+
+    opacity: 0.5;
+    position: absolute;
+    left: 35vw;
+    margin-top: 10vh;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* THIS IS ANIMATION IN LAPTOP VIEW */
+
+@keyframes moving {
+
+    from {
+        transform: translateX(-100vw);
+      }
+      to {
+        transform: translateX(25vw);
+      }
+    
+}
+
+@keyframes slide {
+    from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(20) translateY(1vh);
+      }
+}
+
+@keyframes boxbig {
+    from {
+
+        transform: scale(20) translateY(1vh);
+    }
+
+    to {
+        transform: scale(60) translateY(0vh);
+      }
+}
+    
+
+
+@keyframes popup {
+
+    from {
+        visibility: hidden;
+        opacity: 0;
+      }
+      to {
+        visibility: visible;
+        opacity: 1;
+      }
+    
+}
+
+
+@keyframes fadeout {
+
+    from {
+      
+        visibility: visible;
+        opacity: 1;
+      }
+      to {
+        visibility: hidden;
+        opacity: 0;  
+      }
+    
+}
+
+
+
+
+
+
+
+
+/* THIS IS ANIMATION nd CLASS IN PHONEVIEW */
+
+
+@media (max-width: 480px){
+
+    
+    .motor {
+
+        
+        height: 50vh;
+        top: 6vh;
+        left: -100vw;
+        animation: movingphone 2s linear 1s forwards;
+
+        
+
+    }
+ 
+    .bubble1{
+        
+        height: 20vh;
+        top: 5vh;
+        left: 25vw;
+        animation: popup 1s linear 3s forwards;
+        
+    }
+
+   .close{
+
+        animation: fadeout 1s linear 3s forwards;
+    }
+
+    .bubble2{
+
+        
+        height: 20vh;
+        animation: popup 1s linear 4s forwards;
+        top: 2vh;
+        left: -10vw;
+        
+    }
+
+    .bubble3{
+
+        top: 2vh;
+        left: -10vw;
+        
+        height: 20vh;
+    }
+
+    .popup {
+
+        
+        width: 60vw;
+        top: 35vh;
+        left: 25vw;
+        
+    }
+
+    .box {
+
+        position: absolute;
+        display: flex;
+        height: 2vh;
+        top: 35vh;
+        left: 50vw;
+        
+    }
+
+    
+
+
+}
+
+@keyframes movingphone {
+
+    from {
+        transform: translateX(-100vw);
+      }
+      to {
+        transform: translateX(60vw);
+      }
+    
+}
+
+
+
+
+
+
+

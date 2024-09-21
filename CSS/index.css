@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+
+body {
+
+    background-color: #F3E5F5;
+    
+}
+
+.container {
+
+    position: relative;
+    height: 50vh;
+    top: 30vh;
+    height: fit-content;
+   
+    
+    
+}
+
+
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('font/Bitter/Bitter-VariableFont_wght.ttf') format('truetype');
+}
+
+.word {
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is clipped right at the end of the animation */
+    white-space: nowrap; /* Keeps the text on a single line */
+     /* Adds a caret at the end of the text */
+    left: 25vw;
+    top: 20vh;
+    
+    height: fit-content;
+}
+
+.item-name {
+
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    font-size: 10vw;
+    width: 100%;
+    color: #AB47BC;
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+    border-right: solid black;
+    animation: typing 6s steps(13) infinite , blink-caret 0.75s step-end infinite;
+    
+    
+    
+}
+
+.enter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: auto;
+    
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #FF4081;
+    color: white;
+
+}
+
+
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; } /* Typing effect */
+    75% { width: 100% } /* Pause at the end */
+    100% { width: 0; }
+    
+    
+    
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+@media (max-width: 500px) {
+
+    .enter{
+
+        width: 40vw;
+        height: 10vw;
+        border-radius: 15px;
+        font-size: 15px;
+    
+
+    }
+
+    .word{
+
+        top: 25vh;
+        left: 20vw;
+    }
+
+    .item-name{
+
+        font-size: 13vw;
+        
+    }
+}
+
+    
+
+
+

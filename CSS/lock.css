@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+body {
+
+    background-color: #F3E5F5;
+    overflow: hidden;
+    
+    
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    border: solid;
+}
+/* THIS IS IPAD VIEW */
+
+.box {
+
+    position: absolute;
+    display: flex;
+    height: 70vh;
+    left: 20vh;
+    top: 10vh;
+    visibility: visible;
+    
+    
+}
+
+.lock{
+
+    position: absolute;
+    display: flex;
+    height: 40vh;
+    left: 27vw;
+    top: 30vh;
+    
+    animation: swing 4s infinite ease;
+    transform-origin: top center;
+}
+
+
+
+
+/* THIS IS FORM  */
+.tekateki {
+
+    position: absolute;
+    display: flex;
+    height: 25vh;
+    width: 30vw;
+    top: 20vh;
+    left: 60vw;
+    border-radius: 30px;
+    border: solid 5px black;
+    visibility: hidden;
+    background-color: white;
+    
+}
+
+
+
+.name{
+
+    
+    width: 100%;
+    
+}
+
+
+.name h2{
+
+    text-align: center;
+    margin-top: 5vh;
+    
+}
+
+.name h3{
+
+    text-align: center;
+    margin-top: 1vh;
+    
+}
+
+
+
+.buttonname{
+    position:relative;
+    text-align: center;
+    top: 3vh;
+    left: 3vh;
+    
+    display: inline-flex;
+
+}
+
+.buttonname2{
+    position:relative;
+    text-align: center;
+    top: 3vh;
+    left: 7vh;
+    
+    display: inline-flex;
+
+}
+
+.button{
+    position: relative;
+    height: 5vh;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #F3E5F5;
+    width: 15vh;
+    background-color: red;
+}
+@keyframes swing {
+
+    0% {
+        transform: rotate(0deg); /* Start position, no rotation */
+      }
+      20% {
+        transform: rotate(10deg); /* Rotation in one direction */
+      }
+      40% {
+        transform: rotate(-10deg); /* Rotation in the opposite direction */
+      }
+      60% {
+        transform: rotate(5deg); /* Continue rotation */
+      }
+      80% {
+        transform: rotate(-3deg); /* Continue rotation */
+      }
+      100% {
+        transform: rotate(0deg); /* End position, no rotation */
+      }
+    
+}
+
+
+
+
+/* THIS IS PHONEVIEW */
+
+@media (max-width:500px) {
+
+    .box{
+
+        height: 50vh;
+        left: -15vh;
+        top: 10v
+    }
+    
+    .lock{
+        height: 25vh;
+        left: 6vw;
+        top: 25vh;
+        animation: swing 4s infinite ease;
+        transform-origin: top center;
+    }
+
+    .tekateki {
+
+        position: absolute;
+        display: flex;
+        height: 30vh;
+        width: 50vw;
+        top: 50vh;
+        left: 30vw;
+        border-radius: 30px;
+        border: solid 5px black;
+        visibility: hidden;
+        background-color: white;
+        
+    }
+    
+    
+    
+    .name{
+    
+        
+        width: 100%;
+        
+    }
+    
+    
+    .name h2{
+    
+        text-align: center;
+        margin-top: 5vh;
+        
+    }
+    
+    .name h3{
+    
+        text-align: center;
+        margin-top: 1vh;
+        font-size: 2vh;
+        
+    }
+    
+    
+    
+    .buttonname{
+        position:relative;
+        text-align: center;
+        top: 1vh;
+        left: 5vh;
+        
+        
+        display: inline-flex;
+    
+    }
+    
+    .buttonname2{
+        position:relative;
+        text-align: center;
+        top: 1vh;
+        left: 5vh;
+        margin-bottom: vh;
+    
+        
+        display: inline-flex;
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* after lock has been opened */
+
+.dissapear {
+
+    animation: gone 1s ease-out forwards;
+}
+
+.box2 {
+
+    position: absolute;
+    display: flex;
+    height: 70vh;
+    left: 15vh;
+    top: 15vh;
+    visibility: hidden;
+    
+    
+}
+
+.penutup {
+    position: absolute;
+    display: flex;
+    height: 70vh;
+    left: 19vh;
+    top: -0vh;
+    visibility: hidden;
+    
+    
+}
+
+.openbox {
+
+    animation: openbox 2s ease forwards;
+}
+
+.cahaya {
+
+    visibility: visible;
+    position: fixed;
+    z-index: 9999;
+    object-fit: cover;
+    border: solid;
+    top: 0;
+    left: 0;
+    opacity: 0;
+   
+}
+
+.flash{
+
+    visibility: visible;
+    position: fixed;
+    display: flex;
+    z-index: -1;
+    object-fit: cover;
+    
+    width: 50vw;
+    height: 50vh;
+    left: 20vw;
+    top: 15vh;
+   
+
+
+}
+.opacity {
+
+    animation: opace 4s ease forwards;
+}
+
+.opacity2 {
+
+    animation: opace2 4s linear forwards;
+}
+
+@media (max-width:500px) {
+    
+
+    .box2 {
+
+        position: absolute;
+        display: flex;
+        height: 50vh;
+        left: -18vh;
+        top: 14vh;
+        visibility: hidden;
+        
+        
+    }
+    
+    .penutup {
+        position: absolute;
+        display: flex;
+        height: 50vh;
+        left: -15vh;
+        top: 3vh;
+        visibility: hidden;
+        
+        
+    }
+    
+    .openbox {
+    
+        animation: openbox 2s ease forwards;
+    }
+    
+    .cahaya {
+    
+        visibility: visible;
+        position: fixed;
+        z-index: 9999;
+        object-fit: cover;
+        border: solid;
+        top: 0;
+        left: 0;
+        opacity: 0;
+       
+    }
+    
+    .flash{
+    
+        visibility: hidden;
+        position: fixed;
+        display: flex;
+        z-index: -1;
+        object-fit: cover;
+        
+        width: 50vw;
+        height: 40vh;
+        left: -25vw;
+        top: 15vh;
+       
+    
+    
+    }
+
+    .opacity2 {
+
+        animation: opace2phone 4s linear forwards;
+    }
+
+
+
+}
+
+.opacityphone {
+
+    animation: opacephone 4s linear forwards;
+}
+
+@keyframes opacephone {
+
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        z-index: -1;
+    }
+   
+    100% {
+        transform: scale(7) translateX(-20vh);
+        opacity: 1;
+        
+        z-index: 9998;
+    }
+    
+}
+
+
+@keyframes opace {
+
+    from{
+
+        opacity: 0;
+    }to {
+
+        opacity: 1;
+    }
+    
+}
+
+@keyframes opace2 {
+
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        z-index: -1;
+    }
+   
+    100% {
+        transform: scale(15) translateX(-8vh);
+        opacity: 1;
+        
+        z-index: 9998;
+    }
+    
+}
+
+
+@keyframes openbox {
+    
+    from {
+
+        transform: translate(0);
+
+    }to{
+
+        transform: translateY(-10vh);
+
+    }
+}
+
+@keyframes gone {
+
+    from{
+
+        opacity: 1;
+    }to {
+
+        opacity: 0;
+    }
+    
+}
+
+.word{
+    position: relative;
+    
+    text-align: center;
+    top: 10vh;
+    opacity: 0.5;
+}
+

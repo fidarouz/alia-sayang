@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+body{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.word {
+    position: relative;
+    display: block;
+    text-align: center;
+    
+    top: 5vh;
+    font-size: 4vw;
+    left: -100vw;
+    animation: slideright 2s ease forwards, goup 2s ease forwards;
+    
+}
+
+.font{
+
+    font-family: "Pacifico", cursive;
+    text-shadow: 3px 3px 0 #ff6ac1, 6px 6px 0 #ff6cbf, 9px 9px 0 #ff6ebd, 12px 12px 0 #ff70bb, 15px 15px 0 #ff72b9;
+    color:  #800080;
+    
+    
+}
+
+.word2 {
+    position: relative;
+    
+    font-size: 6vw;
+    text-align: center;
+    margin-top: 5vh;
+    overflow: hidden;
+    height: fit-content;
+    right: -100vw;
+    animation: slideleft 2s ease forwards , goup 2s ease forwards;
+    
+    
+}
+
+.word3 {
+    position: relative;
+    
+    font-size: 4vw;
+    text-align: center;
+    
+    overflow: hidden;
+    height: fit-content;
+    bottom: -100vh;
+    animation: slideup 2s ease forwards, goup 2s ease forwards;
+    
+}
+
+.letter{
+
+    position: absolute;
+    display: flex;
+    width: 60vw;
+    height: 60vh;
+    
+    top: 100vh;
+    left: 20vw;
+    justify-content: center;
+    animation: goatas 2s ease 4s forwards;
+}
+
+
+.scale{
+
+    animation: scaleup 3s ease forwards;
+}
+.canva{
+
+    position: absolute;
+    display: flex;
+    border: solid;
+    width: 100vw;
+    height: 100vh;
+   
+    
+    
+}
+
+.fade{
+
+    
+    animation: fadeout 3s ease forwards;
+}
+
+/* THIS IS PHONEVIEW */
+
+@media (max-width: 500px) {
+
+    .word{
+
+        top: 20vh;
+    }
+
+    .word2{
+
+        margin-top: 20vh;
+    }
+
+    .letter{
+
+        width: 40vw;
+        height: 40vh;
+        left: 30vw;
+        animation: goatasphone 2s ease 4s forwards;
+    }
+
+    .scale{
+
+        animation: scaleupphone 3s ease forwards;
+    }
+    
+    
+}
+
+
+
+@keyframes slideright {
+    
+    from{
+
+        transform: translateX(-100vw);
+
+    }to{
+
+        transform: translateX(100vw);
+    }
+}
+
+
+@keyframes goatas {
+
+    from{
+        transform: translateY(0vh);
+    } to{
+
+        transform: translateY(-80vh);
+    }
+}
+
+@keyframes goatasphone {
+
+    from{
+        transform: translateY(0vh);
+    } to{
+
+        transform: translateY(-60vh);
+    }
+}
+
+@keyframes slideleft {
+    
+    from{
+
+        transform: translateX(100vw);
+
+    }to{
+
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes slideup {
+    
+    from{
+
+        transform: translateY(0vh); 
+
+    }to{
+
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes godown {
+    
+    from{
+
+        transform: translateY(0);
+
+    }to{
+
+        transform: translateY(10vh);
+    }
+}
+
+@keyframes scaleup {
+    
+    from{
+
+        transform: translateY(-80vh);
+        
+
+    }to{
+
+        transform: scale(4) translateY(-20vh);
+    }
+}
+
+@keyframes scaleupphone {
+    
+    from{
+
+        transform: translateY(-60vh);
+        
+
+    }to{
+
+        transform: scale(4) translateY(-20vh);
+    }
+}
+
+@keyframes fadeout {
+
+    from{
+
+        opacity: 0;
+    }to {
+
+        opacity: 1;
+    }
+    
+}
+
+
+
